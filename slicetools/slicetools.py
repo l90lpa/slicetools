@@ -122,10 +122,10 @@ def shift_slice(s, n) -> slice:
     if start < 1:
         start = None
     elif start >= length:
-        return slice(0,0) # Empty slice
+        return slice(0, 0, s.step) # Empty slice
     
     if stop < 1:
-        return slice(0,0) # Empty slice
+        return slice(0, 0, s.step) # Empty slice
     elif stop >= length:
         stop = None
 
